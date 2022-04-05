@@ -1,0 +1,17 @@
+d-l
+#FF8181
+#FF9393
+#FFABAB
+#FFC7C7
+#FFD0D0
+
+
+head    b38181
+cap     b34949
+par     6fb382
+
+
+FF9393
+head    b34949
+cap     b35656
+par     807070
