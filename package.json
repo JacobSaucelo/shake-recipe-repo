@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "16.14.0",
-    "yarn": "1.22.10"
+    "npm": "8.3.1"
   },
   "description": "shakes blog for shakes addict",
   "main": "server.js",
@@ -12,9 +12,9 @@
   "scripts": {
     "start": "node api/server.js",
     "server": "nodemon api/server.js",
-    "client": "yarn --cwd frontend start",
-    "dev": "concurrently \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn install --cwd frontend && yarn run build --cwd frontend"
+    "client": "npm --prefix frontend start",
+    "dev": "concurrently \"npm server\" \"npm client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
