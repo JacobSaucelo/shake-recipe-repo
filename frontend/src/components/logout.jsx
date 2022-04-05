@@ -6,7 +6,7 @@ const Logout = ({ toggleLoggedIn }) => {
   const navigate = useNavigate();
   const handleLogout = () => {
     axios
-      .get("http://localhost:3001/api/v1/user/logout", {
+      .get("/api/v1/user/logout", {
         withCredentials: true,
       })
       .then((data) => {

@@ -13,7 +13,7 @@
     "start": "node api/server.js",
     "server": "nodemon api/server.js",
     "client": "npm --prefix frontend start",
-    "dev": "concurrently \"npm server\" \"npm client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "dependencies": {

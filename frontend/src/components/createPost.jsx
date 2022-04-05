@@ -22,7 +22,7 @@ const CreatePost = ({ isActive, Toggle }) => {
 
   const postRecipe = async () => {
     await axios
-      .post("http://localhost:3001/api/v1/shakes/", recipeForm, {
+      .post("/api/v1/shakes/", recipeForm, {
         withCredentials: true,
       })
       .then((res) => {

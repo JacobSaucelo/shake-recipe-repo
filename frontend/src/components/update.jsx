@@ -23,7 +23,7 @@ const Update = ({ info, id, toggle }) => {
 
   const updatePost = async () => {
     await axios
-      .put(`http://localhost:3001/api/v1/shakes/${id}`, updatedPost, {
+      .put(`/api/v1/shakes/${id}`, updatedPost, {
         withCredentials: true,
       })
       .then((res) => {
