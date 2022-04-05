@@ -1,6 +1,10 @@
 {
   "name": "shakesblog",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.14.0",
+    "yarn": "1.22.10"
+  },
   "description": "shakes blog for shakes addict",
   "main": "server.js",
   "author": "jacob",
