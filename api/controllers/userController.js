@@ -38,6 +38,7 @@ const registerUser = asyncHandler(async (req, res) => {
     const token = generateToken(user._id);
     res.cookie("token", token, {
       httpOnly: true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,
     });
     res.status(200).json({
@@ -67,6 +68,7 @@ const loginUser = asyncHandler(async (req, res) => {
     const token = generateToken(user._id);
     res.cookie("token", token, {
       httpOnly: true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,
     });
     res.status(200).json({
