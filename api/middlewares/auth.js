@@ -21,4 +21,24 @@ const protect = asyncHandler(async (req, res, next) => {
     throw new Error("Unauthorized no token");
   }
 });
-module.exports = { protect };
+
+const checkUser = asyncHandler(async (req, res, next) => {
+  const token = req.cookies.token;
+  if (token) {
+    try {
+      const authenticate = jwt.verify(token, process.env.JWT_SECRET);
+      res.locals.user = await User.findById(authenticate.id).select(
+        "-password"
+      );
+      next();
+    } catch (error) {
+      console.log("no token");
+      next();
+    }
+  } else {
+    console.log("no token");
+    next();
+  }
+});
+
+module.exports = { protect, checkUser };

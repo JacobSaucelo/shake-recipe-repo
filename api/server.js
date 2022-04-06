@@ -6,6 +6,7 @@ const port = process.env.PORT || 3002;
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/db");
 const cors = require("cors");
+// const { checkUser } = require("./middlewares/auth");
 connectDB();
 
 const app = express();
@@ -19,6 +20,7 @@ app.use(
   })
 );
 
+// app.get("/", checkUser);
 app.use("/api/v1/user", require("./routes/userRouter"));
 app.use("/api/v1/shakes", require("./routes/shakesRouter"));
 
